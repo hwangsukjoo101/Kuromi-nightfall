@@ -1,5 +1,14 @@
 # Kuromi: Nightfall
 
-Move with WASD or arrows. Hold X to auto-aim at the closest zombie. Collect XP and press 1–7 to switch unlocked weapons.
+## 🎮 [Play the game](https://hwangsukjoo101.github.io/Kuromi-nightfall/)
 
-Enable hosting in Settings → Pages → Deploy from a branch → main → / (root) → Save.
+A zombie survival arcade game with three lives, weapon upgrades, and a temporary invincibility pickup.
+
+### Controls
+
+- **WASD or arrow keys:** Move
+- **Hold X:** Shoot at the closest zombie
+- **1–7:** Switch unlocked weapons
+- **P:** Pause
+
+Collect pink XP crystals to level up and unlock machine guns, shotguns, a ray gun, and a bazooka. Collect Hello Kitty for 10 seconds of invincibility.
