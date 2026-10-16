@@ -7,8 +7,11 @@ A zombie survival arcade game with three lives, weapon upgrades, and a temporary
 ### Controls
 
 - **WASD or arrow keys:** Move
-- **Hold X:** Shoot at the closest zombie
+- **Mouse:** Aim
+- **Hold left click or X:** Shoot
 - **1–7:** Switch unlocked weapons
 - **P:** Pause
+
+If the mouse is outside the arena, shooting automatically targets the nearest zombie. Touch controls are available on mobile.
 
 Collect pink XP crystals to level up and unlock machine guns, shotguns, a ray gun, and a bazooka. Collect Hello Kitty for 10 seconds of invincibility.
