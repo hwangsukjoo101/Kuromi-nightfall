@@ -1,6 +1,6 @@
 # Kuromi: Nightfall
 
-## 🎮 [Play the game](https://hwangsukjoo101.github.io/Kuromi-nightfall/)
+## 🎮 [Play the game — mouse controls](https://hwangsukjoo101.github.io/Kuromi-nightfall/?v=mouse-controls)
 
 A zombie survival arcade game with three lives, weapon upgrades, and a temporary invincibility pickup.
 
