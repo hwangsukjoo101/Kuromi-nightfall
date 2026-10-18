@@ -16,6 +16,18 @@ The world uses AI-generated realistic artwork: a weathered ship deck and ocean, 
 
 Artwork is hosted in [assets/realistic](assets/realistic). [Generation prompts](assets/realistic/ARTWORK.md) describe the assets. Images load asynchronously with the original canvas artwork as a fallback, so unavailable art does not prevent play.
 
+### Build your voyage
+
+Every level pauses the action for a choice of three randomized upgrades. Choose by clicking or pressing **1–3**: movement speed, weapon damage, fire rate, XP collection range, a life restored (maximum three), or a short Gear 5 reserve. Upgrades reset each voyage.
+
+Marines develop new tactics: chargers from round 2 warn before rushing, riflemen from round 3 fire dodgeable shots while keeping their distance, and shield Marines from round 4 resist frontal shots. Flank their slowly turning shields or pierce them with Kizaru.
+
+A Marine Commander arrives every five rounds with a visible health bar and a telegraphed five-shot volley. Defeating one awards 12 XP and a cosmetic unlock. Nukes clear ordinary Marines and damage commanders for 65% of their maximum health; Dark Hole still absorbs up to four ordinary Marines and damages commanders.
+
+Luffy and Marines animate their legs independently while traveling, and stop stepping when stationary or paused. Hit flashes, optional synthesized sound, and optional screen shake add feedback. Sound and shake can be toggled in **Voyage rewards**.
+
+Cosmetic achievements are stored in this browser: defeat a commander for the Crimson outfit, defeat 100 Marines across voyages for the Moonlit deck, and reach round 10 for Azure weapon trails. Cosmetics do not change combat stats. The game-over screen gives a personal-record target, your next weapon or boss goal, and the live shared leaderboard.
+
 ### Controls
 
 - **WASD / arrows:** Move
