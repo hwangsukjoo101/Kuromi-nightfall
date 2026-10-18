@@ -2,7 +2,7 @@
 
 **A One Piece pirate survival game starring Luffy. Battle waves of Marines, unlock seven weapons, and activate Gear 5—all in your browser.**
 
-## [▶ Play One Piece: Grand Line Survival](https://hwangsukjoo101.github.io/Kuromi-nightfall/?v=grand-line)
+## [▶ Play One Piece: Grand Line Survival](https://hwangsukjoo101.github.io/Onepiece-vs-marines/)
 
 ### The adventure
 
