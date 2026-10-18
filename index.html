@@ -26,7 +26,7 @@ function showProfile(){
 async function scoreRequest(path,options={}){
  const response=await fetch(scoreAPI+path,{...options,headers:{...scoreHeaders,...options.headers},signal:AbortSignal.timeout(12000)});
  if(!response.ok)throw new Error('Leaderboard request failed: '+response.status);
- return response.status===204?null:response.json();
+ const body=await response.text();return body?JSON.parse(body):null;
 }
 async function refreshRanks(append=false){
  if(loadingRanks)return;loadingRanks=true;$('refreshRanks').disabled=true;$('moreRanks').disabled=true;
