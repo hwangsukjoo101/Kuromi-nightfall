@@ -2,13 +2,19 @@
 
 **A One Piece pirate survival game starring Luffy. Battle waves of Marines, unlock seven weapons, and activate Gear 5—all in your browser.**
 
-## [▶ Play One Piece: Grand Line Survival](https://hwangsukjoo101.github.io/Onepiece-vs-marines/?v=shared-leaderboard)
+## [▶ Play One Piece: Grand Line Survival](https://hwangsukjoo101.github.io/Onepiece-vs-marines/?v=realistic-world)
 
 ### The adventure
 
 Defend a wooden ship deck against endless Marine waves. Start with three lives, collect pink XP crystals to level up, and unlock pirate weapons from a Straw Hat flintlock to a golden Kizaru laser beam and Blackbeard’s Dark Hole, which absorbs and defeats up to four Marines per hit. Grab a meat feast for ten seconds of Gear 5 invincibility. From round 5, glowing ☢ nuke pickups clear all Marines on screen, award their kills and XP, and return after a 40-second cooldown.
 
 Enter a username before setting sail. A shared Supabase leaderboard ranks all usernames by highest round, then Marine kills from that run. Names are matched without case sensitivity. Use Refresh for current standings and Load more to browse all players. The game-over screen shows a live top-ten leaderboard, highlights your username, and refreshes every five seconds until you sail again. Scores sync at each new round and at game over; failed submissions are kept in browser storage and retried when online. Older browser-only records remain visible locally and are not automatically uploaded.
+
+### AI visual update
+
+The world uses AI-generated realistic artwork: a weathered ship deck and ocean, detailed Luffy and Marine sprites, roast-meat and nuke pickups. Warm cinematic lighting, contact shadows, depth sorting, high-resolution canvas rendering, glowing weapon trails, and a brass-and-navy interface complete the look. The game remains a lightweight 2D canvas game, with no AI calls or API charges while playing.
+
+Artwork is hosted in [assets/realistic](assets/realistic). [Generation prompts](assets/realistic/ARTWORK.md) describe the assets. Images load asynchronously with the original canvas artwork as a fallback, so unavailable art does not prevent play.
 
 ### Controls
 
