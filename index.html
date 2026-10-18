@@ -117,7 +117,8 @@ const upgradePool=[
  {name:'Quick hands',description:'Fire 12% faster.',apply:()=>runStats.rate=Math.max(.4,runStats.rate*.88)},
  {name:'Treasure magnet',description:'Collect XP from 30% farther away.',apply:()=>runStats.magnet=Math.min(3,runStats.magnet*1.3)},
  {name:'Second wind',description:'Restore one life, up to three.',apply:()=>p.lives=Math.min(3,p.lives+1)},
- {name:'Gear reserve',description:'Gain 5 seconds of invincibility.',apply:()=>shield=Math.max(shield,5)}
+ {name:'Gear reserve',description:'Gain 5 seconds of invincibility.',apply:()=>shield=Math.max(shield,5)},
+ {name:'Feast training',description:'Meat invincibility lasts 2 seconds longer.',apply:()=>runStats.gear+=2}
 ];
 function openUpgrade(){
  if(upgradeOpen||!upgradeQueue||!running)return;
@@ -233,7 +234,7 @@ $('look').onchange=e=>{progress.look=e.target.value;saveProgress()};
 refreshProgress();
 
 function arsenal(){ $('weapons').innerHTML=guns.map((w,i)=>`<div class="weapon ${lv>=w.lv?'on':''} ${i===weapon?'active':''}"><em>${w.icon}</em><div><b>${w.name}</b><small>${lv>=w.lv?(i===weapon?'EQUIPPED':`PRESS ${i+1} TO EQUIP`):`UNLOCKS AT LEVEL ${w.lv}`}</small></div></div>`).join('') }
-function reset(){runStats={speed:1,damage:1,rate:1,magnet:1};enemyShots=[];upgradeOpen=false;upgradeQueue=0;upgradeChoices=[];bossCycle=0;runBosses=0;hitShake=0;$('upgradePicker').hidden=true;Object.keys(keys).forEach(k=>keys[k]=false);rays=[];p={x:480,y:330,lives:3,step:0,walking:false};z=[];b=[];fx=[];orbs=[];kills=0;lv=1;xp=0;need=5;time=0;spawn=.3;shot=0;inv=0;shield=0;kitty=null;kittyTimer=10;nuke=null;nukeTimer=8;nukeFlash=0;weapon=0;toast=0;aim=null;paused=false;$('notice').textContent='';arsenal();hud()}
+function reset(){runStats={speed:1,damage:1,rate:1,magnet:1,gear:0};enemyShots=[];upgradeOpen=false;upgradeQueue=0;upgradeChoices=[];bossCycle=0;runBosses=0;hitShake=0;$('upgradePicker').hidden=true;Object.keys(keys).forEach(k=>keys[k]=false);rays=[];p={x:480,y:330,lives:3,step:0,walking:false};z=[];b=[];fx=[];orbs=[];kills=0;lv=1;xp=0;need=5;time=0;spawn=.3;shot=0;inv=0;shield=0;kitty=null;kittyTimer=10;nuke=null;nukeTimer=8;nukeFlash=0;weapon=0;toast=0;aim=null;paused=false;$('notice').textContent='';arsenal();hud()}
 function hud(){$('hptext').textContent='♥ '.repeat(p.lives)+'♡ '.repeat(3-p.lives);$('hpbar').style.width=(p.lives/3*100)+'%';$('hptext').style.color=shield>0?'#fff39e':'#f188bc';$('hptext').title=shield>0?'Gear 5: '+Math.ceil(shield)+'s':'Three lives';$('wave').textContent=String(1+Math.floor(time/25)).padStart(2,'0');$('kills').textContent=kills;$('level').textContent=`LEVEL ${lv} · ${xp} / ${need} XP`;$('xpbar').style.width=xp/need*100+'%'}
 function currentRound(){return 1+Math.floor(time/25)}
 // Public publishable key only. Database RLS forbids updating/deleting existing scores.
@@ -365,7 +366,7 @@ function update(dt){
  time+=dt;recordRound();checkBoss();hitShake=Math.max(0,hitShake-dt);
  for(const h of holes)h.t-=dt;holes=holes.filter(h=>h.t>0);inv-=dt;shield=Math.max(0,shield-dt);
  kittyTimer-=dt;if(kittyTimer<=0&&!kitty){kitty={x:80+Math.random()*800,y:120+Math.random()*400};kittyTimer=25}
- if(kitty&&Math.hypot(kitty.x-p.x,kitty.y-p.y)<42){kitty=null;shield=10;burst(p.x,p.y,'#fff0ab',28);$('notice').textContent='GEAR 5 · INVINCIBLE FOR 10s!';toast=3;sound('reward')}
+ if(kitty&&Math.hypot(kitty.x-p.x,kitty.y-p.y)<42){kitty=null;shield=10+runStats.gear;burst(p.x,p.y,'#fff0ab',28);$('notice').textContent='GEAR 5 · INVINCIBLE FOR '+(10+runStats.gear)+'s!';toast=3;sound('reward')}
  shot-=dt;toast-=dt;updateNuke(dt);if(toast<=0)$('notice').textContent='';
  const dx=(keys.d||keys.arrowright?1:0)-(keys.a||keys.arrowleft?1:0),dy=(keys.s||keys.arrowdown?1:0)-(keys.w||keys.arrowup?1:0),norm=Math.hypot(dx,dy)||1,ox=p.x,oy=p.y;
  p.x=Math.max(30,Math.min(930,p.x+dx/norm*220*runStats.speed*dt));p.y=Math.max(90,Math.min(580,p.y+dy/norm*220*runStats.speed*dt));
