@@ -1,8 +1,12 @@
-# One Piece: Grand Line Survival
+# 🏴‍☠️ One Piece: Grand Line Survival
 
-## 🏴‍☠️ [Play the game](https://hwangsukjoo101.github.io/Kuromi-nightfall/?v=grand-line)
+**A One Piece pirate survival game starring Luffy. Battle waves of Marines, unlock seven weapons, and activate Gear 5—all in your browser.**
 
-Play as Luffy and defend a pirate ship against waves of Marines. Collect XP crystals, unlock seven pirate weapons, and grab meat for ten seconds of Gear 5 invincibility. You have three lives.
+## [▶ Play One Piece: Grand Line Survival](https://hwangsukjoo101.github.io/Kuromi-nightfall/?v=grand-line)
+
+### The adventure
+
+Defend a wooden ship deck against endless Marine waves. Start with three lives, collect pink XP crystals to level up, and unlock pirate weapons from a Straw Hat flintlock to a Kizaru light beam and Buggy bazooka. Grab a meat feast for ten seconds of Gear 5 invincibility.
 
 ### Controls
 
