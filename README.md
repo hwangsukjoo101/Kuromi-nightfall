@@ -6,7 +6,7 @@
 
 ### The adventure
 
-Defend a wooden ship deck against endless Marine waves. Start with three lives, collect pink XP crystals to level up, and unlock pirate weapons from a Straw Hat flintlock to a golden Kizaru laser beam and Blackbeard’s Dark Hole, which absorbs and defeats up to four Marines per hit. Grab a meat feast for ten seconds of Gear 5 invincibility.
+Defend a wooden ship deck against endless Marine waves. Start with three lives, collect pink XP crystals to level up, and unlock pirate weapons from a Straw Hat flintlock to a golden Kizaru laser beam and Blackbeard’s Dark Hole, which absorbs and defeats up to four Marines per hit. Grab a meat feast for ten seconds of Gear 5 invincibility. From round 5, glowing ☢ nuke pickups clear all Marines on screen, award their kills and XP, and return after a 40-second cooldown.
 
 Enter a username before setting sail. A shared Supabase leaderboard ranks all usernames by highest round, then Marine kills from that run. Names are matched without case sensitivity. Use Refresh for current standings and Load more to browse all players. The game-over screen shows a live top-ten leaderboard, highlights your username, and refreshes every five seconds until you sail again. Scores sync at each new round and at game over; failed submissions are kept in browser storage and retried when online. Older browser-only records remain visible locally and are not automatically uploaded.
 
