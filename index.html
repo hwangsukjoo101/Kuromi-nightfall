@@ -21,7 +21,10 @@ h1{letter-spacing:-1.5px;text-shadow:0 3px 18px #0006}.intro p{color:#aebbc0}
 .notice{color:#ffe4a3;text-shadow:0 2px 4px #000,0 0 20px #000;font-size:21px}
 .footerline{color:#9aaaae}.death-board{background:#091820ee;border-color:#c8a26666}.death-board h3{color:#f1ce8d}
 @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto}}
-</style><header><div class="brand">☠ one piece<span> / grand line</span></div><div class="tag">SET SAIL. DEFY THE MARINES.</div></header><main><div class="intro"><div><div class="tag">GRAND LINE / CINEMATIC SURVIVAL</div><h1>Grand Line: <i>Survival</i></h1><p>Salt air. Steel nerves. Defend the Grand Line.</p></div><span class="badge">✦ &nbsp; UNLIMITED AMMO · ENDLESS WAVES</span></div><div class="layout"><section><div class="arena"><canvas id="game" width="960" height="640" aria-label="Luffy pirate survival arena"></canvas><div class="hud"><div><small>LIVES</small><b id="hptext">♥ ♥ ♥</b><div class="health"><div id="hpbar" style="width:100%"></div></div></div><div><small>ROUND</small><b id="wave">01</b></div><div><small>ELIMINATED</small><b id="kills">0</b></div><div><button id="pause" class="pause" style="pointer-events:auto" aria-label="Pause game">Ⅱ</button></div></div><div class="bottomhud"><small id="level">LEVEL 1 · 0 / 5 XP</small><div class="xp"><div id="xpbar" style="width:0%"></div></div></div><div id="notice" class="notice"></div><div class="overlay" id="overlay"><div class="starticon">☾</div><div class="tag">THE GRAND LINE IS CALLING</div><h2>Become the<br>Pirate King.</h2><p>Help Luffy survive waves of Marines.<br>Collect XP. Level up. Bring bigger guns.</p><button class="primary" id="start">Set sail &nbsp; ↗</button><p style="font-size:11px">WASD to move · Mouse to aim · Hold left click to shoot</p></div></div><div class="mobile"><button id="left">◀</button><button id="up">▲</button><button id="down">▼</button><button id="right">▶</button><button id="fire">FIRE ✦</button></div><div class="footerline"><span>✧ AI-crafted world · Chase the One Piece.</span><span>BEST BOUNTY &nbsp; <b id="best">0</b> MARINES</span></div></section><aside class="sidebar"><div class="panel"><h3>Captain’s log</h3><label for="username" style="font-size:12px">Username</label><input id="username" maxlength="20" placeholder="Your pirate name" autocomplete="nickname" style="width:100%;margin:10px 0;padding:10px;border:1px solid #75603c;border-radius:6px;background:#091a28;color:#ffe1a0"><p id="captainbest" style="font-size:12px"></p><h3 style="margin-top:18px">World leaderboard</h3><button id="refreshRanks" class="pause">Refresh</button><div id="localranks" style="font-size:11px;line-height:1.8;max-height:180px;overflow:auto"></div><button id="moreRanks" class="pause" hidden>Load more</button><small id="savehint" style="display:block;font-size:10px;margin-top:10px">Connecting to the shared leaderboard…</small></div><div class="panel"><h3>Pirate arsenal <span style="color:#a682cb">↗</span></h3><div id="weapons"></div><small style="font-size:10px;display:block;line-height:1.6;margin-top:15px">Weapons unlock as you level up.<br>Press 1–7 to switch unlocked guns.</small></div><div><div class="panel"><h3>How to survive</h3><div class="control"><span>Move</span><span class="key">W A S D</span></div><div class="control"><span>Shoot</span><span class="key">LEFT CLICK / X</span></div><div class="control"><span>Aim</span><span class="key">MOUSE</span></div><div class="control"><span>Pause</span><span class="key">P</span></div><div class="control"><span>Switch weapon</span><span class="key">1 – 7</span></div></div><div class="panel" style="border-color:#453151;background:#173447"><div class="tag" style="font-size:10px">✦ LITTLE TIP</div><p style="font-size:12px;line-height:1.7;color:#b9a7c8;margin-bottom:0">Pink crystals are XP. Get close to collect them. Grab a meat feast for 10 seconds of Gear 5 invincibility! From round 5, collect a glowing ☢ nuke to clear every Marine on deck.</p></div></div></aside></div></main><script>
+
+.upgrade-picker[hidden]{display:none!important}.upgrade-picker{position:absolute;inset:0;z-index:5;display:flex;flex-direction:column;align-items:center;justify-content:center;background:#06141ced;backdrop-filter:blur(5px);padding:24px;text-align:center}.upgrade-picker h2{font:700 24px 'Space Grotesk';color:#f6cf8b;margin:0 0 10px}.upgrade-picker p{font-size:12px;color:#bdced2;margin:0 0 16px}.upgrade-cards{display:grid;gap:10px;width:min(480px,100%)}.upgrade-card{padding:17px;border:1px solid #c2a56b80;background:linear-gradient(135deg,#283b43,#101d27);color:#ffedcb;border-radius:9px;text-align:left;font:600 13px 'DM Sans';line-height:1.5}.upgrade-card:hover,.upgrade-card:focus-visible{border-color:#ffe0a0;outline:2px solid #ffe0a0;outline-offset:2px;background:#2d424b}.progress-controls{display:flex;gap:12px;flex-wrap:wrap;font-size:11px;color:#c7d2d4;margin:12px 0}.progress-controls label{display:flex;gap:5px;align-items:center}.look-select{width:100%;padding:9px;color:#ecd7b0;background:#0a1a24;border:1px solid #84765b;border-radius:5px}.arena canvas:focus{outline:none}
+@media(max-width:600px){.upgrade-picker{padding:14px}.upgrade-picker h2{font-size:18px}.upgrade-card{padding:10px;font-size:12px}.upgrade-cards{gap:7px}}
+</style><header><div class="brand">☠ one piece<span> / grand line</span></div><div class="tag">SET SAIL. DEFY THE MARINES.</div></header><main><div class="intro"><div><div class="tag">GRAND LINE / CINEMATIC SURVIVAL</div><h1>Grand Line: <i>Survival</i></h1><p>Salt air. Steel nerves. Defend the Grand Line.</p></div><span class="badge">✦ &nbsp; UNLIMITED AMMO · ENDLESS WAVES</span></div><div class="layout"><section><div class="arena"><canvas tabindex="0" id="game" width="960" height="640" aria-label="Luffy pirate survival arena"></canvas><div id="upgradePicker" class="upgrade-picker" role="dialog" aria-modal="true" aria-labelledby="upgradeTitle" hidden><h2 id="upgradeTitle">Choose your upgrade</h2><p>Pick one. Your voyage waits while you choose.</p><div id="upgradeCards" class="upgrade-cards"></div></div><div class="hud"><div><small>LIVES</small><b id="hptext">♥ ♥ ♥</b><div class="health"><div id="hpbar" style="width:100%"></div></div></div><div><small>ROUND</small><b id="wave">01</b></div><div><small>ELIMINATED</small><b id="kills">0</b></div><div><button id="pause" class="pause" style="pointer-events:auto" aria-label="Pause game">Ⅱ</button></div></div><div class="bottomhud"><small id="level">LEVEL 1 · 0 / 5 XP</small><div class="xp"><div id="xpbar" style="width:0%"></div></div></div><div id="notice" class="notice"></div><div class="overlay" id="overlay"><div class="starticon">☾</div><div class="tag">THE GRAND LINE IS CALLING</div><h2>Become the<br>Pirate King.</h2><p>Help Luffy survive waves of Marines.<br>Collect XP. Level up. Bring bigger guns.</p><button class="primary" id="start">Set sail &nbsp; ↗</button><p style="font-size:11px">WASD to move · Mouse to aim · Hold left click to shoot</p></div></div><div class="mobile"><button id="left">◀</button><button id="up">▲</button><button id="down">▼</button><button id="right">▶</button><button id="fire">FIRE ✦</button></div><div class="footerline"><span>✧ AI-crafted world · Chase the One Piece.</span><span>BEST BOUNTY &nbsp; <b id="best">0</b> MARINES</span></div></section><aside class="sidebar"><div class="panel"><h3>Captain’s log</h3><label for="username" style="font-size:12px">Username</label><input id="username" maxlength="20" placeholder="Your pirate name" autocomplete="nickname" style="width:100%;margin:10px 0;padding:10px;border:1px solid #75603c;border-radius:6px;background:#091a28;color:#ffe1a0"><p id="captainbest" style="font-size:12px"></p><h3 style="margin-top:18px">World leaderboard</h3><button id="refreshRanks" class="pause">Refresh</button><div id="localranks" style="font-size:11px;line-height:1.8;max-height:180px;overflow:auto"></div><button id="moreRanks" class="pause" hidden>Load more</button><small id="savehint" style="display:block;font-size:10px;margin-top:10px">Connecting to the shared leaderboard…</small></div><div class="panel"><h3>Voyage rewards</h3><label for="look" style="font-size:12px">Your look</label><select id="look" class="look-select"></select><p id="achievements" style="font-size:11px;line-height:1.6"></p><div class="progress-controls"><label><input id="soundToggle" type="checkbox"> Sound</label><label><input id="shakeToggle" type="checkbox"> Screen shake</label></div><small style="font-size:10px;line-height:1.6">Bosses every 5 rounds. Riflemen shoot, chargers rush, shields block frontal shots. Rewards stay in this browser.</small></div><div class="panel"><h3>Pirate arsenal <span style="color:#a682cb">↗</span></h3><div id="weapons"></div><small style="font-size:10px;display:block;line-height:1.6;margin-top:15px">Weapons unlock as you level up.<br>Press 1–7 to switch unlocked guns.</small></div><div><div class="panel"><h3>How to survive</h3><div class="control"><span>Move</span><span class="key">W A S D</span></div><div class="control"><span>Shoot</span><span class="key">LEFT CLICK / X</span></div><div class="control"><span>Aim</span><span class="key">MOUSE</span></div><div class="control"><span>Pause</span><span class="key">P</span></div><div class="control"><span>Switch weapon</span><span class="key">1 – 7</span></div></div><div class="panel" style="border-color:#453151;background:#173447"><div class="tag" style="font-size:10px">✦ LITTLE TIP</div><p style="font-size:12px;line-height:1.7;color:#b9a7c8;margin-bottom:0">Pink crystals are XP. Get close to collect them. Grab a meat feast for 10 seconds of Gear 5 invincibility! From round 5, collect a glowing ☢ nuke to clear every Marine on deck.</p></div></div></aside></div></main><script>
 const c=document.querySelector('canvas'),g=c.getContext('2d'),$=id=>document.getElementById(id),keys={};
 
 const art={};
@@ -62,19 +65,19 @@ function realisticPirate(x,y){
  const angle=target?Math.atan2(target.y-y,target.x-x):0,flip=target&&target.x<x;
  const moving=keys.a||keys.d||keys.w||keys.s||keys.arrowup||keys.arrowdown||keys.arrowleft||keys.arrowright;
  const bob=running&&!paused&&moving?Math.sin(time*16)*2:0;
- groundShadow(x,y,25);sprite('pirate',x,y-15+bob,86,102,flip,shield>0);
+ groundShadow(x,y,25);walkingSprite('pirate',x,y-15+bob,86,102,flip,shield>0,p.step||0,p.walking);
  return true;
 }
 function realisticMarine(v){
  if(!art.marine.ready)return false;
  groundShadow(v.x,v.y,20*v.size);
  const bob=running&&!paused?Math.sin(time*(v.fast?16:10)+v.x*.06)*1.4:0;
- sprite('marine',v.x,v.y-10+bob,66*v.size,83*v.size,p.x<v.x);
+ g.save();if(v.hit>0)g.filter='brightness(1.8)';walkingSprite('marine',v.x,v.y-10+bob,66*v.size,83*v.size,p.x<v.x,v.boss,v.step||0,v.walking);g.restore();drawEnemyDetails(v);
  return true;
 }
 function drawScene(){
  g.clearRect(0,0,960,640);
- if(art.deck.ready)g.drawImage(art.deck.image,0,0,960,640);
+ if(art.deck.ready){g.save();if(progress.look==='moonlit')g.filter='brightness(.72) saturate(.8) hue-rotate(170deg)';g.drawImage(art.deck.image,0,0,960,640);g.restore()}
  else{
  const sea=g.createLinearGradient(0,0,960,640);sea.addColorStop(0,'#164650');sea.addColorStop(1,'#071c29');g.fillStyle=sea;g.fillRect(0,0,960,640);
  g.fillStyle='#795338';g.fillRect(48,96,864,472);g.strokeStyle='#3e2d22';g.lineWidth=1;for(let y=96;y<568;y+=22){g.beginPath();g.moveTo(48,y);g.lineTo(912,y);g.stroke()}
@@ -90,8 +93,147 @@ let rays=[];
 let holes=[],profiles=Object.create(null),captain="",savedRound=0,storageOK=true;try{const data=JSON.parse(localStorage.getItem("grandLineCaptains")||"{}");if(data&&typeof data==="object")for(const [k,v]of Object.entries(data)){if(v&&typeof v.name==="string"&&Number.isInteger(v.round)&&v.round>=1)profiles[k]={name:v.name.slice(0,20),round:v.round,kills:Number.isInteger(v.kills)?v.kills:0}}captain=localStorage.getItem("grandLineCaptain")||""}catch{storageOK=false}
 let nuke=null,nukeTimer=0,nukeFlash=0;
 let kitty,kittyTimer,shield,p,z,b,fx,orbs,kills,lv,xp,need,time,spawn,shot,inv,weapon=0,running=false,paused=false,last=0,aim=null,toast=0,best=0;try{best=+localStorage.getItem('grandLineBest')||0}catch{}$('best').textContent=best;
+let runStats,enemyShots=[],upgradeOpen=false,upgradeQueue=0,upgradeChoices=[],bossCycle=0,runBosses=0,hitShake=0,hitSoundAt=-1,runPrevious;
+let progress={kills:0,bosses:0,round:0,look:'classic',sound:true,shake:false};
+try{const saved=JSON.parse(localStorage.getItem('grandLineProgress')||'{}');for(const k of ['kills','bosses','round'])if(Number.isFinite(saved[k])&&saved[k]>=0)progress[k]=saved[k];if(['classic','crimson','moonlit','azure'].includes(saved.look))progress.look=saved.look;if(typeof saved.sound==='boolean')progress.sound=saved.sound;if(typeof saved.shake==='boolean')progress.shake=saved.shake}catch{}
+function saveProgress(){try{localStorage.setItem('grandLineProgress',JSON.stringify(progress))}catch{}}
+let soundContext;
+function sound(kind){
+ if(!progress.sound)return;
+ try{
+  const Audio=window.AudioContext||window.webkitAudioContext;if(!Audio)return;
+  if(!soundContext)soundContext=new Audio();if(soundContext.state==='suspended')void soundContext.resume();
+  const now=soundContext.currentTime;if(kind==='hit'&&now-hitSoundAt<.06)return;if(kind==='hit')hitSoundAt=now;
+  const tone=soundContext.createOscillator(),gain=soundContext.createGain();
+  const spec={shot:[150,65,.045,.025],hit:[330,100,.07,.035],hurt:[90,35,.2,.06],reward:[520,1000,.22,.045],boss:[80,160,.5,.06]}[kind]||[300,600,.1,.03];
+  tone.type=kind==='reward'?'sine':'triangle';tone.frequency.setValueAtTime(spec[0],now);tone.frequency.exponentialRampToValueAtTime(spec[1],now+spec[2]);
+  gain.gain.setValueAtTime(spec[3],now);gain.gain.exponentialRampToValueAtTime(.001,now+spec[2]);
+  tone.connect(gain);gain.connect(soundContext.destination);tone.start(now);tone.stop(now+spec[2]);
+ }catch{}
+}
+const upgradePool=[
+ {name:'Fleet-footed',description:'Move 12% faster.',apply:()=>runStats.speed=Math.min(2,runStats.speed*1.12)},
+ {name:'Armament Haki',description:'Deal 20% more weapon damage.',apply:()=>runStats.damage*=1.2},
+ {name:'Quick hands',description:'Fire 12% faster.',apply:()=>runStats.rate=Math.max(.4,runStats.rate*.88)},
+ {name:'Treasure magnet',description:'Collect XP from 30% farther away.',apply:()=>runStats.magnet=Math.min(3,runStats.magnet*1.3)},
+ {name:'Second wind',description:'Restore one life, up to three.',apply:()=>p.lives=Math.min(3,p.lives+1)},
+ {name:'Gear reserve',description:'Gain 5 seconds of invincibility.',apply:()=>shield=Math.max(shield,5)}
+];
+function openUpgrade(){
+ if(upgradeOpen||!upgradeQueue||!running)return;
+ upgradeOpen=true;Object.keys(keys).forEach(k=>keys[k]=false);
+ const pool=upgradePool.filter(v=>(v.name!=='Second wind'||p.lives<3)&&(v.name!=='Fleet-footed'||runStats.speed<2)&&(v.name!=='Quick hands'||runStats.rate>.4)&&(v.name!=='Treasure magnet'||runStats.magnet<3));
+ for(let i=pool.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[pool[i],pool[j]]=[pool[j],pool[i]]}
+ upgradeChoices=pool.slice(0,3);const cards=$('upgradeCards');cards.replaceChildren();
+ upgradeChoices.forEach((choice,i)=>{const button=document.createElement('button');button.className='upgrade-card';button.type='button';button.textContent=(i+1)+'. '+choice.name+' — '+choice.description;button.onclick=()=>chooseUpgrade(i);cards.append(button)});
+ $('upgradeTitle').textContent='LEVEL '+lv+' · CHOOSE YOUR UPGRADE';$('upgradePicker').hidden=false;cards.children[0]?.focus();sound('reward');
+}
+function chooseUpgrade(i){
+ if(!upgradeOpen||!upgradeChoices[i])return;
+ const chosen=upgradeChoices[i];chosen.apply();upgradeQueue--;upgradeOpen=false;$('upgradePicker').hidden=true;upgradeChoices=[];hud();
+ $('notice').textContent=chosen.name.toUpperCase();toast=2;
+ if(upgradeQueue)openUpgrade();else c.focus();
+}
+function refreshProgress(){
+ const options=[['classic','Classic Grand Line',true],['crimson','Crimson outfit · defeat a boss',progress.bosses>0],['moonlit','Moonlit deck · 100 total kills',progress.kills>=100],['azure','Azure trails · reach round 10',progress.round>=10]];
+ const select=$('look');select.replaceChildren();
+ for(const [value,label,unlocked]of options){const option=document.createElement('option');option.value=value;option.textContent=label;option.disabled=!unlocked;select.append(option)}
+ if(!options.some(v=>v[0]===progress.look&&v[2]))progress.look='classic';select.value=progress.look;
+ $('achievements').textContent=progress.kills+' total Marines · '+progress.bosses+' bosses defeated · Best round '+progress.round;
+}
+function addEnemy(kind='swordsman',boss=false){
+ const side=Math.floor(Math.random()*4),round=currentRound(),fast=kind==='charger';
+ const health=boss?100+Math.floor(round/5)*45:(3+Math.floor(time/40)*2)*(kind==='shield'?2:1);
+ const v={x:side===0?-30:side===1?990:80+Math.random()*800,y:side===2?-30:side===3?680:100+Math.random()*450,hp:health,maxHp:health,speed:boss?45:(fast?70:kind==='rifleman'?34:38)+Math.min(time*.18,100),fast,size:boss?1.7:fast?.85:1.1,kind:boss?'boss':kind,boss,step:Math.random()*8,walking:false,attack:boss?2.4:2+Math.random(),windup:0,charging:0,facing:0};
+ v.facing=Math.atan2(p.y-v.y,p.x-v.x);z.push(v);return v;
+}
+function checkBoss(){
+ const cycle=Math.floor(currentRound()/5);if(cycle<=bossCycle)return;
+ bossCycle=cycle;addEnemy('boss',true);$('notice').textContent='MARINE COMMANDER · DODGE THE GOLD VOLLEY';toast=3;sound('boss');
+}
+function rewardEnemy(v){
+ if(v.rewarded)return;v.rewarded=true;kills++;sound('hit');
+ orbs.push({x:v.x,y:v.y,value:v.boss?12:1});
+ burst(v.x,v.y,v.boss?'#ffce59':'#bad8db',v.boss?30:8);
+ if(v.boss){runBosses++;progress.bosses++;saveProgress();refreshProgress();$('notice').textContent='COMMANDER DEFEATED · +12 XP · CRIMSON OUTFIT UNLOCKED';toast=3;sound('reward')}
+}
+function damageEnemy(v,amount,sx=p.x,sy=p.y,piercing=false){
+ if(v.hp<=0)return;
+ if(v.kind==='shield'&&!piercing&&Math.cos(Math.atan2(sy-v.y,sx-v.x)-v.facing)>.45)amount*=.25;
+ v.hit=.1;v.hp-=amount;burst(v.x,v.y,'#ffdf92',3);
+ if(v.hp<=0)rewardEnemy(v);
+}
+function hurtPlayer(){
+ if(inv>0||shield>0)return;p.lives=Math.max(0,p.lives-1);inv=2.5;hitShake=.25;burst(p.x,p.y,'#ef8cad');sound('hurt');hud();if(!p.lives)end();
+}
+function shootEnemy(v,count=1,speed=220){
+ const angle=v.aim??Math.atan2(p.y-v.y,p.x-v.x);
+ for(let i=0;i<count;i++){const a=angle+(i-(count-1)/2)*.2;enemyShots.push({x:v.x,y:v.y,vx:Math.cos(a)*speed,vy:Math.sin(a)*speed,t:4,boss:v.boss})}
+}
+function moveEnemies(dt){
+ for(const v of z){
+  if(v.hp<=0)continue;v.hit=Math.max(0,(v.hit||0)-dt);
+  const angle=Math.atan2(p.y-v.y,p.x-v.x),distance=Math.hypot(p.x-v.x,p.y-v.y);
+  const turn=Math.atan2(Math.sin(angle-v.facing),Math.cos(angle-v.facing));v.facing+=Math.max(-dt*1.6,Math.min(dt*1.6,turn));
+  let speed=v.speed,heading=angle;v.attack-=dt;
+  if(v.kind==='rifleman'){
+   speed=distance<170?-v.speed:distance<290?0:v.speed;
+   if(v.attack<=0&&v.x>0&&v.x<960&&v.y>0&&v.y<640){shootEnemy(v);v.attack=2.8}
+  }else if(v.kind==='charger'||v.boss){
+   if(v.windup>0){v.windup-=dt;speed=0;if(v.windup<=0){if(v.boss){shootEnemy(v,5,185);v.attack=2.8}else{v.charging=.55;v.attack=3.2}}}
+   else if(v.charging>0){v.charging-=dt;speed=260;heading=v.aim}
+   else if(v.attack<=0&&distance<550){v.windup=v.boss?.95:.7;v.aim=angle;speed=0}
+  }
+  const ox=v.x,oy=v.y;v.x+=Math.cos(heading)*speed*dt;v.y+=Math.sin(heading)*speed*dt;
+  const traveled=Math.hypot(v.x-ox,v.y-oy);v.walking=traveled>.01;v.step+=traveled*.1;
+  if(Math.hypot(v.x-p.x,v.y-p.y)<(v.boss?40:29)){hurtPlayer();if(!running)return}
+ }
+ for(const q of enemyShots){q.x+=q.vx*dt;q.y+=q.vy*dt;q.t-=dt;if(q.t>0&&Math.hypot(q.x-p.x,q.y-p.y)<20){q.t=0;hurtPlayer();if(!running)return}}
+ enemyShots=enemyShots.filter(q=>q.t>0&&q.x>-30&&q.x<990&&q.y>-30&&q.y<670);
+}
+function walkingSprite(name,x,y,width,height,flip,glow,phase,moving){
+ const a=art[name];if(!a?.ready)return false;
+ const box=a.bounds,ratio=Math.min(width/box.w,height/box.h),w=box.w*ratio,h=box.h*ratio,split=.61,hipY=-h/2+h*split;
+ g.save();g.translate(x,y);if(flip)g.scale(-1,1);
+ if(glow){g.shadowColor='#fff4cd';g.shadowBlur=15}
+ if(name==='pirate'&&progress.look==='crimson')g.filter='saturate(1.35) hue-rotate(-18deg)';
+ // Each lower-body half swings independently around its hip; the torso covers the seam.
+ for(let leg=0;leg<2;leg++){
+  const swing=moving?Math.sin(phase+leg*Math.PI):0,hipX=-w/2+leg*w/2+w/4;
+  g.save();g.translate(hipX,hipY);g.rotate(swing*.2);g.translate(0,-Math.max(0,swing)*2);
+  g.drawImage(a.image,box.x+leg*box.w/2,box.y+box.h*split,box.w/2,box.h*(1-split),-w/4,0,w/2,h*(1-split));g.restore();
+ }
+ g.drawImage(a.image,box.x,box.y,box.w,box.h*.65,-w/2,-h/2,w,h*.65);g.restore();return true;
+}
+function drawEnemyDetails(v){
+ g.save();g.translate(v.x,v.y);
+ if(v.kind==='shield'){
+  g.rotate(v.facing);g.strokeStyle='#b5d3de';g.lineWidth=6;g.shadowColor='#6aadc2';g.shadowBlur=6;g.beginPath();g.arc(0,0,29*v.size,-.85,.85);g.stroke();
+ }else if(v.kind==='rifleman'){
+  g.rotate(Math.atan2(p.y-v.y,p.x-v.x));g.fillStyle='#2c221b';g.fillRect(8,-1,20,6);g.fillStyle='#bbc3c0';g.fillRect(22,-2,17,4);
+ }
+ g.restore();
+ if(v.windup>0){g.save();g.strokeStyle=v.boss?'#ffd66b':'#ff7361';g.setLineDash([9,7]);g.lineWidth=v.boss?4:3;g.beginPath();g.moveTo(v.x,v.y);g.lineTo(v.x+Math.cos(v.aim)*700,v.y+Math.sin(v.aim)*700);g.stroke();g.restore()}
+ if(v.boss){
+  g.save();g.fillStyle='#10151be0';g.fillRect(v.x-44,v.y-99,88,7);g.fillStyle='#e4b65e';g.fillRect(v.x-44,v.y-99,88*Math.max(0,v.hp/v.maxHp),7);
+  g.fillStyle='#ffe4a3';g.font='bold 10px sans-serif';g.textAlign='center';g.fillText('COMMANDER',v.x,v.y-108);g.restore();
+ }
+}
+function retryGoal(){
+ const old=runPrevious||{round:0,kills:0};
+ const record=currentRound()>old.round||currentRound()===old.round&&kills>(old.kills||0);
+ let goal=record?'New personal best!':currentRound()<old.round?'Reach round '+(old.round+1)+' to beat your record.':Math.max(1,(old.kills||0)-kills+1)+' more Marine kills would beat your record.';
+ goal+=' '+(lv<9?'Reach level 9 for Kizaru.':lv<10?'One more level unlocks Blackbeard.':'Next boss: round '+((Math.floor(currentRound()/5)+1)*5)+'.');
+ return goal;
+}
+$('soundToggle').checked=progress.sound;$('shakeToggle').checked=progress.shake;
+$('soundToggle').onchange=e=>{progress.sound=e.target.checked;saveProgress();if(progress.sound)sound('reward')};
+$('shakeToggle').onchange=e=>{progress.shake=e.target.checked;saveProgress()};
+$('look').onchange=e=>{progress.look=e.target.value;saveProgress()};
+refreshProgress();
+
 function arsenal(){ $('weapons').innerHTML=guns.map((w,i)=>`<div class="weapon ${lv>=w.lv?'on':''} ${i===weapon?'active':''}"><em>${w.icon}</em><div><b>${w.name}</b><small>${lv>=w.lv?(i===weapon?'EQUIPPED':`PRESS ${i+1} TO EQUIP`):`UNLOCKS AT LEVEL ${w.lv}`}</small></div></div>`).join('') }
-function reset(){rays=[];p={x:480,y:330,lives:3};z=[];b=[];fx=[];orbs=[];kills=0;lv=1;xp=0;need=5;time=0;spawn=.3;shot=0;inv=0;shield=0;kitty=null;kittyTimer=10;nuke=null;nukeTimer=8;nukeFlash=0;weapon=0;toast=0;aim=null;paused=false;$('notice').textContent='';arsenal();hud()}
+function reset(){runStats={speed:1,damage:1,rate:1,magnet:1};enemyShots=[];upgradeOpen=false;upgradeQueue=0;upgradeChoices=[];bossCycle=0;runBosses=0;hitShake=0;$('upgradePicker').hidden=true;Object.keys(keys).forEach(k=>keys[k]=false);rays=[];p={x:480,y:330,lives:3,step:0,walking:false};z=[];b=[];fx=[];orbs=[];kills=0;lv=1;xp=0;need=5;time=0;spawn=.3;shot=0;inv=0;shield=0;kitty=null;kittyTimer=10;nuke=null;nukeTimer=8;nukeFlash=0;weapon=0;toast=0;aim=null;paused=false;$('notice').textContent='';arsenal();hud()}
 function hud(){$('hptext').textContent='♥ '.repeat(p.lives)+'♡ '.repeat(3-p.lives);$('hpbar').style.width=(p.lives/3*100)+'%';$('hptext').style.color=shield>0?'#fff39e':'#f188bc';$('hptext').title=shield>0?'Gear 5: '+Math.ceil(shield)+'s':'Three lives';$('wave').textContent=String(1+Math.floor(time/25)).padStart(2,'0');$('kills').textContent=kills;$('level').textContent=`LEVEL ${lv} · ${xp} / ${need} XP`;$('xpbar').style.width=xp/need*100+'%'}
 function currentRound(){return 1+Math.floor(time/25)}
 // Public publishable key only. Database RLS forbids updating/deleting existing scores.
@@ -164,9 +306,9 @@ $('moreRanks').onclick=()=>void refreshRanks(true);
 addEventListener('online',()=>{void flushScores();void refreshRanks()});
 setInterval(()=>{void flushScores();if(!running)void refreshRanks()},30000);
 showProfile();void refreshRanks();void flushScores();
-function start(){const name=$('username').value.trim().slice(0,20);if(!name){$('username').focus();$('captainbest').textContent='Please enter a username to set sail.';return}clearInterval(deathLeaderboardTimer);deathLeaderboardTimer=null;$('overlay').classList.remove('gameover');captain=name;reset();holes=[];savedRound=0;recordRound();$('username').disabled=true;running=true;$('overlay').style.display='none';$('pause').textContent='Ⅱ'}
-$('start').onclick=start;function pause(){if(!running)return;paused=!paused;$('pause').textContent=paused?'▶':'Ⅱ';$('notice').textContent=paused?'PAUSED':''} $('pause').onclick=pause;
-addEventListener('keydown',e=>{if(e.target?.tagName==='INPUT')return;if(['ArrowUp','ArrowDown','ArrowLeft','ArrowRight',' '].includes(e.key))e.preventDefault();keys[e.key.toLowerCase()]=true;if(!e.repeat&&e.key.toLowerCase()==='p')pause();let i=Number(e.key)-1;if(i>=0&&i<guns.length&&lv>=guns[i].lv){weapon=i;arsenal()}});addEventListener('keyup',e=>keys[e.key.toLowerCase()]=false);addEventListener('blur',()=>{Object.keys(keys).forEach(k=>keys[k]=false);if(running&&!paused)pause()});c.onpointermove=e=>{if(e.pointerType==='touch')return;let r=c.getBoundingClientRect();aim={x:(e.clientX-r.left)/r.width*960,y:(e.clientY-r.top)/r.height*640}};c.onpointerleave=()=>aim=null;c.onpointerdown=e=>{if(e.button!==0)return;let r=c.getBoundingClientRect();aim={x:(e.clientX-r.left)/r.width*960,y:(e.clientY-r.top)/r.height*640};keys.x=true;c.setPointerCapture(e.pointerId)};addEventListener('pointerup',()=>keys.x=false);
+function start(){const name=$('username').value.trim().slice(0,20);if(!name){$('username').focus();$('captainbest').textContent='Please enter a username to set sail.';return}clearInterval(deathLeaderboardTimer);deathLeaderboardTimer=null;$('overlay').classList.remove('gameover');captain=name;runPrevious={...(profiles[name.toLowerCase()]||{round:0,kills:0})};reset();holes=[];savedRound=0;recordRound();$('username').disabled=true;running=true;sound('reward');c.focus();$('overlay').style.display='none';$('pause').textContent='Ⅱ'}
+$('start').onclick=start;function pause(){if(!running||upgradeOpen)return;paused=!paused;$('pause').textContent=paused?'▶':'Ⅱ';$('notice').textContent=paused?'PAUSED':''} $('pause').onclick=pause;
+addEventListener('keydown',e=>{if(upgradeOpen){if(['1','2','3'].includes(e.key)){e.preventDefault();chooseUpgrade(Number(e.key)-1)}else if(e.key==='Tab'){e.preventDefault();const cards=Array.from($('upgradeCards').children),index=cards.indexOf(document.activeElement);cards[(index+(e.shiftKey?-1:1)+cards.length)%cards.length]?.focus()}return}if(['INPUT','SELECT'].includes(e.target?.tagName))return;if(['ArrowUp','ArrowDown','ArrowLeft','ArrowRight',' '].includes(e.key))e.preventDefault();keys[e.key.toLowerCase()]=true;if(!e.repeat&&e.key.toLowerCase()==='p')pause();let i=Number(e.key)-1;if(i>=0&&i<guns.length&&lv>=guns[i].lv){weapon=i;arsenal()}});addEventListener('keyup',e=>keys[e.key.toLowerCase()]=false);addEventListener('blur',()=>{Object.keys(keys).forEach(k=>keys[k]=false);if(running&&!paused)pause()});c.onpointermove=e=>{if(e.pointerType==='touch')return;let r=c.getBoundingClientRect();aim={x:(e.clientX-r.left)/r.width*960,y:(e.clientY-r.top)/r.height*640}};c.onpointerleave=()=>aim=null;c.onpointerdown=e=>{if(e.button!==0||upgradeOpen)return;let r=c.getBoundingClientRect();aim={x:(e.clientX-r.left)/r.width*960,y:(e.clientY-r.top)/r.height*640};keys.x=true;c.setPointerCapture(e.pointerId)};addEventListener('pointerup',()=>keys.x=false);
 for(const [id,k] of [['left','a'],['right','d'],['up','w'],['down','s'],['fire','x']]){let el=$(id);el.onpointerdown=e=>{e.preventDefault();el.setPointerCapture(e.pointerId);keys[k]=true};el.onpointerup=el.onpointercancel=()=>keys[k]=false}
 function ellipse(x,y,rx,ry,color){g.fillStyle=color;g.beginPath();g.ellipse(x,y,rx,ry,0,0,7);g.fill()}
 function kuromi(x,y){if(realisticPirate(x,y))return;g.save();g.translate(x,y);ellipse(0,27,24,7,'#07111c66');g.fillStyle='#265ab1';g.fillRect(-14,11,28,16);g.fillStyle='#efbd8d';g.fillRect(-12,24,8,8);g.fillRect(4,24,8,8);ellipse(-9,33,10,4,'#725038');ellipse(9,33,10,4,'#725038');g.fillStyle=shield>0?'#fff5e8':'#cb343d';g.fillRect(-16,-7,32,23);g.fillStyle='#efbd8d';g.fillRect(-6,-7,12,23);ellipse(-20,4,6,11,'#efbd8d');ellipse(20,4,6,11,'#efbd8d');ellipse(0,-20,21,23,'#efbd8d');g.fillStyle=shield>0?'#ffffff':'#18222b';g.beginPath();g.moveTo(-22,-22);g.lineTo(-17,-43);g.lineTo(-10,-35);g.lineTo(0,-45);g.lineTo(9,-35);g.lineTo(20,-42);g.lineTo(24,-21);g.fill();ellipse(-7,-20,2.5,3,'#1d2430');ellipse(8,-20,2.5,3,'#1d2430');g.strokeStyle='#9f5544';g.lineWidth=1.5;g.beginPath();g.moveTo(8,-13);g.lineTo(16,-13);g.moveTo(11,-16);g.lineTo(11,-11);g.stroke();ellipse(0,-9,8,4,'#fff9e9');if(shield<=0){ellipse(0,-39,30,6,'#e6b85e');ellipse(0,-45,20,12,'#e6b85e');g.fillStyle='#c33938';g.fillRect(-20,-43,40,5)}let t=aim||z.reduce((a,v)=>!a||Math.hypot(v.x-p.x,v.y-p.y)<Math.hypot(a.x-p.x,a.y-p.y)?v:a,null);g.rotate(t?Math.atan2(t.y-y,t.x-x):0);g.fillStyle='#573b2a';g.fillRect(14,4,21,9);g.fillStyle='#c7d9dc';g.fillRect(25,2,23,7);g.fillStyle='#edc464';g.fillRect(20,11,5,8);g.restore()}
@@ -181,10 +323,10 @@ function updateNuke(dt){
  if(!nuke&&nukeTimer<=0){nuke={x:100+Math.random()*760,y:150+Math.random()*350};nukeTimer=40}
  if(nuke&&Math.hypot(nuke.x-p.x,nuke.y-p.y)<42){
  nuke=null;nukeTimer=40;nukeFlash=.85;
- const victims=z.filter(v=>v.hp>0);kills+=victims.length;
- for(const v of victims){orbs.push({x:v.x,y:v.y});burst(v.x,v.y,'#ffcf54',10)}
- z=[];burst(p.x,p.y,'#fff5b0',35);
- $('notice').textContent='NUKE! · '+victims.length+' MARINES CLEARED';toast=3;
+ const victims=z.filter(v=>v.hp>0);
+ for(const v of victims)damageEnemy(v,v.boss?v.maxHp*.65:v.hp,p.x,p.y,true);
+ z=z.filter(v=>v.hp>0);sound('boss');burst(p.x,p.y,'#fff5b0',35);
+ $('notice').textContent='NUKE! · '+victims.filter(v=>v.hp<=0).length+' MARINES CLEARED';toast=3;
  recordRound(true);
  }
 }
@@ -206,21 +348,72 @@ function fireLightBeam(angle,damage){
   if(marine.hp<=0)continue;
   const along=Math.max(0,Math.min(length,(marine.x-x)*dx+(marine.y-y)*dy));
   if(Math.hypot(marine.x-(x+dx*along),marine.y-(y+dy*along))>22*marine.size+5)continue;
-  marine.hp-=damage;burst(marine.x,marine.y,'#ffe790',6);
-  if(marine.hp<=0){kills++;orbs.push({x:marine.x,y:marine.y});burst(marine.x,marine.y,'#ffce59',10)}
+  damageEnemy(marine,damage,p.x,p.y,true);
  }
  z=z.filter(marine=>marine.hp>0);
 }
 function drawLightBeams(){
  for(const ray of rays){
   g.save();g.globalAlpha=Math.min(1,ray.t/.06);g.lineCap='round';g.shadowColor='#ffb819';g.shadowBlur=26;
-  g.strokeStyle='#ffcb31';g.lineWidth=11;g.beginPath();g.moveTo(ray.x,ray.y);g.lineTo(ray.ex,ray.ey);g.stroke();
+  g.strokeStyle=progress.look==='azure'?'#5fe1ff':'#ffcb31';g.lineWidth=11;g.beginPath();g.moveTo(ray.x,ray.y);g.lineTo(ray.ex,ray.ey);g.stroke();
   g.shadowBlur=10;g.strokeStyle='#fff3ae';g.lineWidth=5;g.stroke();
   g.shadowBlur=0;g.strokeStyle='#ffffff';g.lineWidth=2;g.stroke();g.restore();
  }
 }
-function update(dt){for(const ray of rays)ray.t-=dt;rays=rays.filter(ray=>ray.t>0);time+=dt;recordRound();for(const h of holes)h.t-=dt;holes=holes.filter(h=>h.t>0);inv-=dt;shield=Math.max(0,shield-dt);kittyTimer-=dt;if(kittyTimer<=0&&!kitty){kitty={x:80+Math.random()*800,y:120+Math.random()*400};kittyTimer=25}if(kitty&&Math.hypot(kitty.x-p.x,kitty.y-p.y)<42){kitty=null;shield=10;burst(p.x,p.y,"#fff0ab",28);$("notice").textContent="GEAR 5 · INVINCIBLE FOR 10s!";toast=3}shot-=dt;toast-=dt;updateNuke(dt);if(toast<=0)$('notice').textContent='';let dx=(keys.d||keys.arrowright?1:0)-(keys.a||keys.arrowleft?1:0),dy=(keys.s||keys.arrowdown?1:0)-(keys.w||keys.arrowup?1:0),norm=Math.hypot(dx,dy)||1;p.x=Math.max(30,Math.min(930,p.x+dx/norm*220*dt));p.y=Math.max(90,Math.min(580,p.y+dy/norm*220*dt));spawn-=dt;if(spawn<=0){spawn=Math.max(.24,1.25-time*.007);let side=Math.floor(Math.random()*4),fast=Math.random()<.23;z.push({x:side===0?-30:side===1?990:Math.random()*960,y:side===2?-30:side===3?680:Math.random()*640,hp:3+Math.floor(time/40)*2,speed:(fast?66:38)+time*.25,fast,size:fast?.85:1.1})}if(keys.x&&shot<=0){let t=aim||z.reduce((a,v)=>!a||Math.hypot(v.x-p.x,v.y-p.y)<Math.hypot(a.x-p.x,a.y-p.y)?v:a,null);if(t){let w=guns[weapon],a=Math.atan2(t.y-p.y,t.x-p.x);shot=w.rate;if(w.type==='ray'){fireLightBeam(a,w.d)}else for(let i=0;i<w.n;i++){let ang=a+(w.n>1?(i/(w.n-1)-.5)*w.s*2:(Math.random()-.5)*w.s);b.push({x:p.x+Math.cos(a)*28,y:p.y+Math.sin(a)*28,vx:Math.cos(ang)*650,vy:Math.sin(ang)*650,t:1.2,d:w.d,type:w.type})}burst(p.x+Math.cos(a)*42,p.y+Math.sin(a)*42,'#ffe0a0',3)}}for(let v of z){let a=Math.atan2(p.y-v.y,p.x-v.x);v.x+=Math.cos(a)*v.speed*dt;v.y+=Math.sin(a)*v.speed*dt;if(Math.hypot(v.x-p.x,v.y-p.y)<29&&inv<=0&&shield<=0){p.lives=Math.max(0,p.lives-1);inv=2.5;burst(p.x,p.y,'#ef8cad');if(!p.lives){end();return}}}for(let q of b){q.x+=q.vx*dt;q.y+=q.vy*dt;q.t-=dt;for(let v of z){if(v.hp>0&&q.t>0&&Math.hypot(q.x-v.x,q.y-v.y)<22*v.size){if(q.type==='darkhole'){const victims=z.filter(victim=>victim.hp>0).sort((a,b)=>Math.hypot(a.x-q.x,a.y-q.y)-Math.hypot(b.x-q.x,b.y-q.y)).slice(0,4);holes.push({x:q.x,y:q.y,t:1.1,victims:victims.map(v=>({...v}))});for(const victim of victims){victim.hp=0;kills++;orbs.push({x:q.x,y:q.y})}q.t=0;burst(q.x,q.y,'#8c57cf',22);continue}else{v.hp-=q.d}if(q.type!=='ray')q.t=0;else q.t=Math.max(0,q.t-.15);burst(q.x,q.y,'#c5e9b8',4);if(v.hp<=0){kills++;orbs.push({x:v.x,y:v.y});burst(v.x,v.y,'#aa86ce')}}}}z=z.filter(v=>v.hp>0);b=b.filter(q=>q.t>0);orbs=orbs.filter(o=>{let d=Math.hypot(o.x-p.x,o.y-p.y);if(d<110){o.x+=(p.x-o.x)*dt*7;o.y+=(p.y-o.y)*dt*7}if(d<23){xp++;if(xp>=need){xp-=need;lv++;need=5+lv*2;let unlock=guns.findIndex(w=>w.lv===lv);if(unlock>=0)weapon=unlock;arsenal();$('notice').textContent=unlock>=0?guns[unlock].name.toUpperCase()+' UNLOCKED!':'LEVEL '+lv+'!' ;toast=2.5}return false}return true});for(let f of fx){f.x+=f.vx*dt;f.y+=f.vy*dt;f.t-=dt}fx=fx.filter(f=>f.t>0);hud()}
-function end(){recordRound(true);$('username').disabled=false;running=false;best=Math.max(best,kills);try{localStorage.setItem('grandLineBest',best)}catch{}$('best').textContent=best;$('overlay').innerHTML=`<div class="starticon">☠</div><div class="tag">THE MARINES CAUGHT YOU</div><h2>Keep on sailing.</h2><p>${kills} Marines defeated · Level ${lv}<br>Round ${currentRound()} · Your best: ${profiles[captain.toLowerCase()]?.round||currentRound()}<br>Survived ${Math.floor(time)} seconds. Ready for revenge?</p><section class="death-board" id="deathRanks" aria-label="Live world leaderboard" aria-live="polite"></section><button class="primary" id="again">Sail again ↗</button>`;$('overlay').style.display='flex';$('again').onclick=start;$('overlay').classList.add('gameover');renderDeathLeaderboard();void refreshRanks();clearInterval(deathLeaderboardTimer);deathLeaderboardTimer=setInterval(()=>{void flushScores();void refreshRanks()},5000)}
-function draw(){drawScene();for(let o of orbs){g.save();g.translate(o.x,o.y);g.rotate(Math.PI/4);g.shadowColor='#e8a0ff';g.shadowBlur=12;g.fillStyle='#df9af6';g.fillRect(-4,-4,8,8);g.restore()}if(kitty)helloKitty(kitty.x,kitty.y);drawNuke();if(shield>0){g.strokeStyle='#fff0ab';g.lineWidth=3;g.shadowBlur=18;g.shadowColor='#ffbce7';g.beginPath();g.arc(p.x,p.y-8,49,0,Math.PI*2);g.stroke();g.shadowBlur=0;g.fillStyle='#fff0ab';g.font='bold 13px sans-serif';g.textAlign='center';g.fillText('GEAR 5 '+Math.ceil(shield)+'s',p.x,p.y-68)} for(const actor of [...z.map(v=>({v,y:v.y})),{y:p.y,player:true}].sort((a,b)=>a.y-b.y)){if(actor.player){if(inv<=0||Math.floor(inv*15)%2===0)kuromi(p.x,p.y)}else zombie(actor.v)}drawLightBeams();for(let q of b){g.save();g.lineCap='round';g.shadowColor=q.type==='darkhole'?'#ab6bff':q.type==='ray'?'#ffc52b':'#ffb75c';g.shadowBlur=q.type==='ray'?24:q.type==='darkhole'?20:8;g.strokeStyle=q.type==='ray'?'#ffd43b':q.type==='darkhole'?'#170b27':'#f7dca5';g.lineWidth=q.type==='darkhole'?14:q.type==='ray'?6:3;g.beginPath();g.moveTo(q.x,q.y);g.lineTo(q.x-q.vx*.017,q.y-q.vy*.017);g.stroke();if(q.type==='ray'){g.shadowBlur=8;g.strokeStyle='#fff8d4';g.lineWidth=2;g.stroke()}g.restore()}for(const h of holes){const progress=1-h.t/1.1;g.save();g.shadowColor='#aa64ff';g.shadowBlur=25;ellipse(h.x,h.y,45*(1-.4*progress),28*(1-.4*progress),'#090310');g.strokeStyle='#9c64d5';g.lineWidth=3;g.beginPath();g.ellipse(h.x,h.y,50,32,progress*6,0,Math.PI*2);g.stroke();g.shadowBlur=0;for(const v of h.victims)zombie({...v,x:v.x+(h.x-v.x)*progress,y:v.y+(h.y-v.y)*progress,size:v.size*(1-progress)});g.restore()}for(let f of fx){g.globalAlpha=f.t/.4;g.fillStyle=f.color;g.save();g.shadowColor=f.color;g.shadowBlur=9;g.beginPath();g.arc(f.x,f.y,Math.max(.5,2.5*f.t/.4),0,Math.PI*2);g.fill();g.restore()}g.globalAlpha=1;let gradient=g.createRadialGradient(p.x,p.y,120,480,320,600);gradient.addColorStop(0,'#071b2a00');gradient.addColorStop(1,'#07131c66');g.fillStyle=gradient;g.fillRect(0,0,960,640);if(nukeFlash>0){g.fillStyle='rgba(255,237,163,'+Math.min(.8,nukeFlash)+')';g.fillRect(0,0,960,640)}}
-function frame(t){let dt=Math.min((t-last)/1000,.035);last=t;if(running&&!paused)update(dt);draw();requestAnimationFrame(frame)}reset();requestAnimationFrame(frame);
+function update(dt){
+ for(const ray of rays)ray.t-=dt;rays=rays.filter(ray=>ray.t>0);
+ time+=dt;recordRound();checkBoss();hitShake=Math.max(0,hitShake-dt);
+ for(const h of holes)h.t-=dt;holes=holes.filter(h=>h.t>0);inv-=dt;shield=Math.max(0,shield-dt);
+ kittyTimer-=dt;if(kittyTimer<=0&&!kitty){kitty={x:80+Math.random()*800,y:120+Math.random()*400};kittyTimer=25}
+ if(kitty&&Math.hypot(kitty.x-p.x,kitty.y-p.y)<42){kitty=null;shield=10;burst(p.x,p.y,'#fff0ab',28);$('notice').textContent='GEAR 5 · INVINCIBLE FOR 10s!';toast=3;sound('reward')}
+ shot-=dt;toast-=dt;updateNuke(dt);if(toast<=0)$('notice').textContent='';
+ const dx=(keys.d||keys.arrowright?1:0)-(keys.a||keys.arrowleft?1:0),dy=(keys.s||keys.arrowdown?1:0)-(keys.w||keys.arrowup?1:0),norm=Math.hypot(dx,dy)||1,ox=p.x,oy=p.y;
+ p.x=Math.max(30,Math.min(930,p.x+dx/norm*220*runStats.speed*dt));p.y=Math.max(90,Math.min(580,p.y+dy/norm*220*runStats.speed*dt));
+ const traveled=Math.hypot(p.x-ox,p.y-oy);p.walking=traveled>.01;p.step+=traveled*.1;
+ spawn-=dt;
+ if(spawn<=0){
+  spawn=Math.max(.3,1.25-time*.007)*(z.some(v=>v.boss)?1.5:1);
+  const roll=Math.random(),round=currentRound();let kind='swordsman';
+  if(round>=4&&roll<.18)kind='shield';else if(round>=3&&roll<.4)kind='rifleman';else if(round>=2&&roll<.65)kind='charger';
+  addEnemy(kind);
+ }
+ if(keys.x&&shot<=0){
+  const target=aim||z.reduce((a,v)=>!a||Math.hypot(v.x-p.x,v.y-p.y)<Math.hypot(a.x-p.x,a.y-p.y)?v:a,null);
+  if(target){
+   const w=guns[weapon],a=Math.atan2(target.y-p.y,target.x-p.x);shot=w.rate*runStats.rate;sound('shot');
+   if(w.type==='ray')fireLightBeam(a,w.d*runStats.damage);
+   else for(let i=0;i<w.n;i++){const ang=a+(w.n>1?(i/(w.n-1)-.5)*w.s*2:(Math.random()-.5)*w.s);b.push({x:p.x+Math.cos(a)*28,y:p.y+Math.sin(a)*28,vx:Math.cos(ang)*650,vy:Math.sin(ang)*650,t:1.2,d:w.d*runStats.damage,type:w.type})}
+   burst(p.x+Math.cos(a)*42,p.y+Math.sin(a)*42,'#ffe0a0',3);
+  }
+ }
+ moveEnemies(dt);if(!running)return;
+ for(const q of b){
+  q.x+=q.vx*dt;q.y+=q.vy*dt;q.t-=dt;
+  for(const v of z){
+   if(v.hp<=0||q.t<=0||Math.hypot(q.x-v.x,q.y-v.y)>=22*v.size)continue;
+   if(q.type==='darkhole'){
+    const victims=z.filter(m=>m.hp>0&&!m.boss).sort((a,b)=>Math.hypot(a.x-q.x,a.y-q.y)-Math.hypot(b.x-q.x,b.y-q.y)).slice(0,4);
+    holes.push({x:q.x,y:q.y,t:1.1,victims:victims.map(m=>({...m}))});
+    for(const m of victims)damageEnemy(m,m.hp,p.x,p.y,true);
+    if(v.boss)damageEnemy(v,q.d,p.x,p.y,true);
+    q.t=0;burst(q.x,q.y,'#8c57cf',22);
+   }else{damageEnemy(v,q.d,p.x,p.y);q.t=0}
+  }
+ }
+ z=z.filter(v=>v.hp>0);b=b.filter(q=>q.t>0);
+ orbs=orbs.filter(o=>{
+  const d=Math.hypot(o.x-p.x,o.y-p.y);
+  if(d<110*runStats.magnet){o.x+=(p.x-o.x)*dt*7;o.y+=(p.y-o.y)*dt*7}
+  if(d>=23)return true;
+  xp+=o.value||1;
+  while(xp>=need){xp-=need;lv++;need=5+lv*2;upgradeQueue++;const unlock=guns.findIndex(w=>w.lv===lv);if(unlock>=0)weapon=unlock;arsenal()}
+  return false;
+ });
+ for(const f of fx){f.x+=f.vx*dt;f.y+=f.vy*dt;f.t-=dt}fx=fx.filter(f=>f.t>0);
+ hud();if(upgradeQueue)openUpgrade();
+}
+
+function end(){upgradeOpen=false;upgradeQueue=0;$('upgradePicker').hidden=true;progress.kills+=kills;progress.round=Math.max(progress.round,currentRound());saveProgress();refreshProgress();recordRound(true);$('username').disabled=false;running=false;best=Math.max(best,kills);try{localStorage.setItem('grandLineBest',best)}catch{}$('best').textContent=best;$('overlay').innerHTML=`<div class="starticon">☠</div><div class="tag">THE MARINES CAUGHT YOU</div><h2>Keep on sailing.</h2><p>${kills} Marines defeated · Level ${lv}<br>Round ${currentRound()} · Your best: ${profiles[captain.toLowerCase()]?.round||currentRound()}<br>Survived ${Math.floor(time)} seconds.<br>${retryGoal()}</p><section class="death-board" id="deathRanks" aria-label="Live world leaderboard" aria-live="polite"></section><button class="primary" id="again">Sail again ↗</button>`;$('overlay').style.display='flex';$('again').onclick=start;$('overlay').classList.add('gameover');renderDeathLeaderboard();void refreshRanks();clearInterval(deathLeaderboardTimer);deathLeaderboardTimer=setInterval(()=>{void flushScores();void refreshRanks()},5000)}
+function draw(){g.save();if(progress.shake&&hitShake>0)g.translate((Math.random()-.5)*7,(Math.random()-.5)*7);drawScene();for(let o of orbs){g.save();g.translate(o.x,o.y);g.rotate(Math.PI/4);g.shadowColor='#e8a0ff';g.shadowBlur=12;g.fillStyle='#df9af6';g.fillRect(-4,-4,8,8);g.restore()}if(kitty)helloKitty(kitty.x,kitty.y);drawNuke();if(shield>0){g.strokeStyle='#fff0ab';g.lineWidth=3;g.shadowBlur=18;g.shadowColor='#ffbce7';g.beginPath();g.arc(p.x,p.y-8,49,0,Math.PI*2);g.stroke();g.shadowBlur=0;g.fillStyle='#fff0ab';g.font='bold 13px sans-serif';g.textAlign='center';g.fillText('GEAR 5 '+Math.ceil(shield)+'s',p.x,p.y-68)} for(const actor of [...z.map(v=>({v,y:v.y})),{y:p.y,player:true}].sort((a,b)=>a.y-b.y)){if(actor.player){if(inv<=0||Math.floor(inv*15)%2===0)kuromi(p.x,p.y)}else zombie(actor.v)}for(const q of enemyShots){g.save();g.shadowColor=q.boss?'#ffbd50':'#ff6957';g.shadowBlur=12;g.fillStyle=q.boss?'#ffe6a1':'#ff9c84';g.beginPath();g.arc(q.x,q.y,q.boss?6:4,0,Math.PI*2);g.fill();g.restore()}drawLightBeams();for(let q of b){g.save();g.lineCap='round';g.shadowColor=q.type==='darkhole'?'#ab6bff':q.type==='ray'?'#ffc52b':'#ffb75c';g.shadowBlur=q.type==='ray'?24:q.type==='darkhole'?20:8;g.strokeStyle=q.type==='ray'?'#ffd43b':q.type==='darkhole'?'#170b27':progress.look==='azure'?'#8ae9ff':'#f7dca5';g.lineWidth=q.type==='darkhole'?14:q.type==='ray'?6:3;g.beginPath();g.moveTo(q.x,q.y);g.lineTo(q.x-q.vx*.017,q.y-q.vy*.017);g.stroke();if(q.type==='ray'){g.shadowBlur=8;g.strokeStyle='#fff8d4';g.lineWidth=2;g.stroke()}g.restore()}for(const h of holes){const progress=1-h.t/1.1;g.save();g.shadowColor='#aa64ff';g.shadowBlur=25;ellipse(h.x,h.y,45*(1-.4*progress),28*(1-.4*progress),'#090310');g.strokeStyle='#9c64d5';g.lineWidth=3;g.beginPath();g.ellipse(h.x,h.y,50,32,progress*6,0,Math.PI*2);g.stroke();g.shadowBlur=0;for(const v of h.victims)zombie({...v,x:v.x+(h.x-v.x)*progress,y:v.y+(h.y-v.y)*progress,size:v.size*(1-progress)});g.restore()}for(let f of fx){g.globalAlpha=f.t/.4;g.fillStyle=f.color;g.save();g.shadowColor=f.color;g.shadowBlur=9;g.beginPath();g.arc(f.x,f.y,Math.max(.5,2.5*f.t/.4),0,Math.PI*2);g.fill();g.restore()}g.globalAlpha=1;let gradient=g.createRadialGradient(p.x,p.y,120,480,320,600);gradient.addColorStop(0,'#071b2a00');gradient.addColorStop(1,'#07131c66');g.fillStyle=gradient;g.fillRect(0,0,960,640);if(nukeFlash>0){g.fillStyle='rgba(255,237,163,'+Math.min(.8,nukeFlash)+')';g.fillRect(0,0,960,640)}g.restore()}
+function frame(t){let dt=Math.min((t-last)/1000,.035);last=t;if(running&&!paused&&!upgradeOpen)update(dt);draw();requestAnimationFrame(frame)}reset();requestAnimationFrame(frame);
 </script></html>
