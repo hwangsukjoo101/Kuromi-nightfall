@@ -44,7 +44,7 @@ Open the play link in Safari or Chrome, enter your pirate name in Captain’s lo
 - Drag the **right pad** to aim and shoot at the same time.
 - Turn **Auto fire** on to shoot at nearby Marines while using just the movement pad.
 - Use the weapon dropdown to switch unlocked weapons.
-- Portrait and landscape layouts are supported. Touch controls clear when pausing or switching away from the browser.
+- Portrait and landscape layouts are supported. On an iPhone held sideways, the arena, side joysticks, and weapon toolbar fit the visible screen, respecting notch and home-indicator safe areas. Use **Menu / name** for your username, leaderboard, cosmetics, and settings; opening it pauses an active voyage. Touch controls clear when pausing or switching away from the browser.
 
 You can also use your browser’s **Add to Home Screen** option for a shortcut. This does not add offline installation support.
 
