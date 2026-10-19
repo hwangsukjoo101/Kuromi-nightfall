@@ -18,7 +18,7 @@ Artwork is hosted in [assets/realistic](assets/realistic). [Generation prompts](
 
 ### Build your voyage
 
-Every level pauses the action for a choice of three randomized upgrades. Choose by clicking or pressing **1–3**: movement speed, weapon damage, fire rate, XP collection range, a life restored (maximum three), or a short Gear 5 reserve. Upgrades reset each voyage.
+Reaching rounds **3, 6, 9, and every third round afterward** pauses the action for a choice of three randomized upgrades. XP still raises your level and unlocks weapons without opening an upgrade menu. Choose by clicking or pressing **1–3**: movement speed, weapon damage, fire rate, XP collection range, a life restored (maximum three), or a short Gear 5 reserve. Upgrades reset each voyage.
 
 Marines develop new tactics: chargers from round 2 warn before rushing, riflemen from round 3 fire dodgeable shots while keeping their distance, and shield Marines from round 4 resist frontal shots. Flank their slowly turning shields or pierce them with Kizaru.
 
@@ -36,7 +36,17 @@ Cosmetic achievements are stored in this browser: defeat a commander for the Cri
 - **1–7:** Switch unlocked weapons
 - **P:** Pause
 
-When the mouse is outside the arena, shooting targets the closest Marine. Touch controls are available on mobile.
+When the mouse is outside the arena, shooting targets the closest Marine. ### Play on a phone
+
+Open the play link in Safari or Chrome, enter your pirate name in Captain’s log, and tap **Set sail**. No download or app installation is required.
+
+- Drag the **left pad** to move.
+- Drag the **right pad** to aim and shoot at the same time.
+- Turn **Auto fire** on to shoot at nearby Marines while using just the movement pad.
+- Use the weapon dropdown to switch unlocked weapons.
+- Portrait and landscape layouts are supported. Touch controls clear when pausing or switching away from the browser.
+
+You can also use your browser’s **Add to Home Screen** option for a shortcut. This does not add offline installation support.
 
 ### Shared leaderboard backend
 
